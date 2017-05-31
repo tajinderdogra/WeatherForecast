@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+
+<script src="~/Scripts/controller/cityautocompletecontroller.js"></script>
+<script src="~/Scripts/controller/weathercontroller.js"></script>
+<script src="~/Scripts/controller/modulemapper.js"></script>
+
+
+<body ng-app="weatherApp" ng-cloak>
+<div ng-controller="weathercontroller as wCtrl">
+    <div class="jumbotron">
+        <h1>Weather.ly</h1>
+        <p class="lead">Get daily 5-day weather forecast for your city and get ahead of the weather from wherever you are. Know when to wear your shorts.</p>
+        
+        <div ng-controller="cityautocompletecontroller as ctrl">
+            <md-autocomplete ng-disabled="ctrl.isDisabled"
+                             md-selected-item="ctrl.selectedItem"
+                             md-search-text-change="ctrl.searchTextChange(ctrl.searchText)"
+                             md-search-text="ctrl.searchText"
+                             md-selected-item-change="ctrl.selectedItemChange(item)"
+                             md-items="item in ctrl.querySearch(ctrl.searchText)"
+                             md-item-text="item.display"
+                             md-min-length="0"
+                             placeholder="What is your city name? eg., London, Birmingham, Leeds, Edinburgh">
+                <md-item-template>
+                    <span md-highlight-text="ctrl.searchText" md-highlight-flags="^i">{{item.display}}</span>
+                </md-item-template>
+                <md-not-found>
+                    No cities matching "{{ctrl.searchText}}" were found.
+                </md-not-found>
+            </md-autocomplete>
+        </div>
+        <button type="submit" class="btn btn-success" ng-click="getWeather()">Get Forecast</button>
+
+    </div>
+    
+    <div ng-show="hasWeatherResult()">
+        <h2><b>{{weatherresult.city.name}}, {{weatherresult.city.countryCode}}</b>- 5 day forecast</h2>
+
+        <div class="row">
+            <div class="col-md-2" ng-repeat="forecast in weatherresult.forecasts | limitTo : 5">
+                <h2>{{forecast.dateInLocalFormat  | dateFilter :'medium' }}</h2>
+                <p><img src="~/Content/images/{{forecast.weatherList[0].icon}}.png" /></p>
+                <h2>{{forecast.temperature.max}}&deg;C <span style="color: #a9a9a9">{{forecast.temperature.min}}&deg;C</span></h2>
+                <p class="lead">{{forecast.weatherList[0].description}}</p>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>
+</body>

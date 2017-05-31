@@ -1,0 +1,146 @@
+[
+  {
+    "id": 2643743,
+    "name": "London",
+    "country": "UK",
+    "coord": {
+      "lon": -0.12574,
+      "lat": 51.50853
+    }
+  },
+  {
+    "id": 2655603,
+    "name": "Birmingham",
+    "country": "UK",
+    "coord": {
+      "lon": -1.89983,
+      "lat": 52.481419
+    }
+  },
+  {
+    "id": 2654675,
+    "name": "Bristol",
+    "country": "UK",
+    "coord": {
+      "lon": -2.59665,
+      "lat": 51.455231
+    }
+  },
+  {
+    "id": 2644688,
+    "name": "Leeds",
+    "country": "UK",
+    "coord": {
+      "lon": -1.54785,
+      "lat": 53.796478
+    }
+  },
+  {
+    "id": 2643123,
+    "name": "Manchester",
+    "country": "UK",
+    "coord": {
+      "lon": -2.23743,
+      "lat": 53.480949
+    }
+  },
+  {
+    "id": 2650225,
+    "name": "Edinburgh",
+    "country": "UK",
+    "coord": {
+      "lon": -3.19648,
+      "lat": 55.952061
+    }
+  },
+  {
+    "id": 2637891,
+    "name": "Shrewsbury",
+    "country": "UK",
+    "coord": {
+      "lon": -2.75208,
+      "lat": 52.710091
+    }
+  },
+  {
+    "id": 2650752,
+    "name": "Dundee",
+    "country": "UK",
+    "coord": {
+      "lon": -2.96667,
+      "lat": 56.5
+    }
+  },
+  {
+    "id": 2641689,
+    "name": "Newbury",
+    "country": "UK",
+    "coord": {
+      "lon": -1.32059,
+      "lat": 51.40033
+    }
+  },
+  {
+    "id": 2655562,
+    "name": "Bishops Stortford",
+    "country": "UK",
+    "coord": {
+      "lon": 0.15868,
+      "lat": 51.871132
+    }
+  },
+  {
+    "id": 2656719,
+    "name": "Aylesbury",
+    "country": "UK",
+    "coord": {
+      "lon": -0.81458,
+      "lat": 51.81665
+    }
+  },
+  {
+    "id": 2644487,
+    "name": "Lincoln",
+    "country": "UK",
+    "coord": {
+      "lon": -0.53792,
+      "lat": 53.22683
+    }
+  },
+  {
+    "id": 2650967,
+    "name": "Dronfield",
+    "country": "UK",
+    "coord": {
+      "lon": -1.47507,
+      "lat": 53.302212
+    }
+  },
+  {
+    "id": 2637142,
+    "name": "Stafford",
+    "country": "UK",
+    "coord": {
+      "lon": -2.11636,
+      "lat": 52.80521
+    }
+  },
+  {
+    "id": 2641430,
+    "name": "Northampton",
+    "country": "UK",
+    "coord": {
+      "lon": -0.88333,
+      "lat": 52.25
+    }
+  },
+  {
+    "id": 2651123,
+    "name": "Doncaster",
+    "country": "UK",
+    "coord": {
+      "lon": -1.13691,
+      "lat": 53.52327
+    }
+  }
+]
